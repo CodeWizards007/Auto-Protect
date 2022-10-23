@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Expert} from "../common/Expert";
 import {Observable, Subject} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {baseUrl} from "../../environments/environment";
 
 @Injectable({
@@ -14,8 +14,11 @@ export class ExpertService {
 
 
   getExpertsList(): Observable<Expert[]> {
-    return this.httpClient.get<Expert[]>('http://localhost:8080/utilisateur/Consultant/getAll',{
+    return this.httpClient.get<Expert[]>(baseUrl+'/utilisateur/Consultant/getAll',{
       withCredentials: true,
+      headers:new HttpHeaders({
+        'Access-Control-Allow-Origin':'*'
+      })
     });
   }
 
@@ -40,10 +43,13 @@ export class ExpertService {
       withCredentials: true,
     });
   }
-  addConsultant(c: Expert): Observable<Expert> {
+  addExpert(c: Expert): Observable<Expert> {
 
-    return this.httpClient.post<Expert>('http://localhost:8080/api/auth/Consultant/signup', c,{
+    return this.httpClient.post<Expert>(baseUrl+'/EXPERT-SERVICE/expert/auth/signup', c,{
       withCredentials: true,
+      headers:new HttpHeaders({
+        'Access-Control-Allow-Origin':'*'
+      })
     });
   }
 

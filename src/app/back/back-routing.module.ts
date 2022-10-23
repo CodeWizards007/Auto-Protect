@@ -6,6 +6,7 @@ import {CreateResponsableComponent} from "./create-responsable/create-responsabl
 import {CreateAssureurComponent} from "./create-assureur/create-assureur.component";
 import {AdminStatsComponent} from "./admin-stats/admin-stats.component";
 import {ConstatComponent} from "./Constat/constat.component";
+import {ListConstatComponent} from "./list-constat/list-constat.component";
 
 const routes: Routes = [{
   path: '', component: BackComponent,
@@ -15,6 +16,7 @@ const routes: Routes = [{
     {path: "ajoutconstat", component: ConstatComponent},
     {path: 'ajoutAssureur', component: CreateAssureurComponent},
     {path: 'adminStats', component: AdminStatsComponent},
+    {path: 'listConstat', component: ListConstatComponent},
 
   ]
 },

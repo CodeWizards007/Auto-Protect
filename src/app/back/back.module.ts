@@ -12,12 +12,12 @@ import {PreloaderComponent} from "./preloader/preloader.component";
 import { ExpertAddComponent } from './expert/expert-add/expert-add.component';
 import { CreateAdminComponent } from './create-admin/create-admin.component';
 import { ListConstatComponent } from './list-constat/list-constat.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     BackComponent,
     ConstatComponent,
-    BackComponent,
     MenuComponent,
     HeaderComponent,
     FooterComponent,
@@ -28,7 +28,9 @@ import { ListConstatComponent } from './list-constat/list-constat.component';
   ],
   imports: [
     CommonModule,
-    BackRoutingModule
+    BackRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class BackModule { }

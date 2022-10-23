@@ -43,6 +43,15 @@ export class AuthadminServiceService {
     });
   }
 
+  signup(a:Admin):Observable<Admin>{
+    return this.http.post<Admin>(baseUrl+'/ADMIN-SERVICE/admin/auth/signup',a,{
+      withCredentials: true,
+      headers:new HttpHeaders({
+        'Access-Control-Allow-Origin':'*'
+    })
+    });
+  }
+
   profile(id:any): Observable<Admin> {
     /* console.log(this.http.get<Admin>('http://localhost:8080/utilisateur/get/'+id, {
        withCredentials: true,

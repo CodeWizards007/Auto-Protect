@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {Expert} from "../common/Expert";
 import {LoginRequest} from "../common/LoginRequest";
 import {AuthadminServiceService} from "../services/authadmin.service";
+import {Admin} from "../common/Admin";
 
 @Component({
   selector: 'app-login',
@@ -55,7 +56,7 @@ console.log("errrrrr")
     // .pipe(switchMap((e) => this.auth.profile(e.id)));
 
     authFlow.subscribe({
-      next: (user: Expert) => {
+      next: (user: Admin) => {
 
         this.authAdmin.saveUserToLocalStorage(user);
         console.log("bon");

@@ -14,22 +14,13 @@ export class AuthexpertServiceService {
 
   userProfile:BehaviorSubject<Expert> = new BehaviorSubject<Expert>({
     id:0,
-
   nom:'',
-
-
-
   prenom:'',
-
   username:'',
   email:'',
-
   password:'',
   cin:0,
-
   telephone:0,
-
-
   adresse:'',
 
   dateNaissance:new Date(),

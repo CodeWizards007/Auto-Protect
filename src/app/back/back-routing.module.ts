@@ -9,6 +9,9 @@ import {AdminStatsComponent} from "./admin-stats/admin-stats.component";
 import {CreateAdminComponent} from "./create-admin/create-admin.component";
 import {ConstatComponent} from "./Constat/constat.component";
 import {ListConstatComponent} from "./list-constat/list-constat.component";
+import {ListConstatsExpertComponent} from "./listconstat/list-constats-expert/list-constats-expert.component";
+import {RapportAddComponent} from "./rapport/rapport-add/rapport-add.component";
+import {DevisListComponent} from "./devis/devis-list/devis-list.component";
 
 const routes: Routes = [{
   path: '', component: BackComponent,
@@ -20,6 +23,9 @@ const routes: Routes = [{
     {path: 'adminStats', component: AdminStatsComponent},
     {path: 'listConstat', component: ListConstatComponent},
     {path: 'ajoutAdmin', component: CreateAdminComponent},
+    {path: 'listconstats', component: ListConstatsExpertComponent},
+    {path: 'listconstats/ajouterRapport/:id', component: RapportAddComponent},
+    {path: 'listconstats/devis/:id', component: DevisListComponent},
 
   ]
 },

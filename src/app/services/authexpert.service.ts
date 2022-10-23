@@ -90,7 +90,7 @@ uservalue:BehaviorSubject<Expert> = new BehaviorSubject<Expert>(JSON.parse(local
 
   logout(){
     localStorage.removeItem('user-profile');
-    return this.http.post(baseUrl+'/api/auth/signout',{},{
+    return this.http.post(baseUrl+'/EXPERT-SERVICE/expert/auth/signout',{},{
       withCredentials: true,
       headers:new HttpHeaders({
         'Access-Control-Allow-Origin':'*'

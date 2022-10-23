@@ -61,13 +61,13 @@
           <a class="nav-link" >
             <i class="nav-icon fas fa-building" ></i>
             <p >
-              Expert
+              Fonctionnalités Expert
               <i class="fas fa-angle-left right"></i>
 
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a [routerLink]="['/back/ajoutexpert']" class="nav-link">
                 <i class="nav-icon fas fa-stethoscope"></i>
                 <p>
@@ -75,13 +75,42 @@
 
                 </p>
               </a>
-            </li>
+            </li>-->
 
 
           </ul>
         </li>
 
         <li class="nav-item">
+
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user-tie"></i>
+            <p>
+              Fonctionnalités Admin
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/back/ajoutResponsable']" class="nav-link">Créer un responsable</a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="['/back/ajoutexpert']" class="nav-link">Créer un expert</a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="['/back/ajoutAssureur']" class="nav-link">Créer un assureur</a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="['/back/adminStats']" class="nav-link">Statistiques</a>
+            </li>
+          </ul>
+        </li>
+
+        <!--<li class="nav-item">
           <a class="nav-link" >
             <i class="nav-icon fas fa-users"></i>
             <p>
@@ -103,7 +132,7 @@
 
 
           </ul>
-        </li>
+        </li>-->
 
 
 

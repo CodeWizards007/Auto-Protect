@@ -10,6 +10,7 @@ import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {PreloaderComponent} from "./preloader/preloader.component";
 import { ExpertAddComponent } from './expert/expert-add/expert-add.component';
+import { CreateAdminComponent } from './create-admin/create-admin.component';
 import { ListConstatComponent } from './list-constat/list-constat.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ListConstatComponent } from './list-constat/list-constat.component';
     FooterComponent,
     PreloaderComponent,
     ExpertAddComponent,
+    CreateAdminComponent,
     ListConstatComponent,
   ],
   imports: [

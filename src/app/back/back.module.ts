@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { BackRoutingModule } from './back-routing.module';
 import { BackComponent } from './back.component';
+import { ConstatComponent} from './Constat/constat.component';
+
 import {MenuComponent} from "./menu/menu.component";
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
@@ -11,6 +13,8 @@ import { ExpertAddComponent } from './expert/expert-add/expert-add.component';
 
 @NgModule({
   declarations: [
+    BackComponent,
+    ConstatComponent,
     BackComponent,
     MenuComponent,
     HeaderComponent,

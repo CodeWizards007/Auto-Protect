@@ -5,7 +5,7 @@ export class Responsable
 {
   id!:number;
   nom!:string;
-  prénom!:string;
+  prenom!:string;
   username!:string;
   password!:string;
   role!:Array<string>;

@@ -13,6 +13,7 @@ import { ExpertAddComponent } from './expert/expert-add/expert-add.component';
 import { CreateAdminComponent } from './create-admin/create-admin.component';
 import { ListConstatComponent } from './list-constat/list-constat.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CreateResponsableComponent} from "./create-responsable/create-responsable.component";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ExpertAddComponent,
     CreateAdminComponent,
     ListConstatComponent,
+    CreateResponsableComponent
   ],
   imports: [
     CommonModule,

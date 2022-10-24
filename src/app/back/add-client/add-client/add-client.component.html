@@ -1,0 +1,224 @@
+<div class="card card-warning">
+
+  <div class="card-header">
+    <h3 class="card-title">Ajouter Expert</h3>
+  </div>
+
+  <div class="card-body">
+    <form role="form" [formGroup]="addassuree">
+
+
+
+
+      <div class="form-group">
+        <label class="col-form-label" for="us"> Username</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.username.invalid) ? 'is-invalid' : 'is-valid'"   id="us" placeholder="Entrer ..." required="required" name="username" formControlName='username' >
+        <div *ngIf="this.addassuree.controls.username?.invalid && (this.addassuree.controls.username?.dirty || this.addassuree.controls.username?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.username?.errors?.['required']" >
+            Nom D'utilisateur est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.username?.errors?.['minlength']">
+            Nom D'utilisateur au moins 4 characters .
+          </div>
+          <div *ngIf="this.addassuree.controls.username?.errors?.['maxlength']">
+            Nom D'utilisateur au plus 50 characters .
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="form-group">
+        <label class="col-form-label" for="us"> Password</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.password.invalid) ? 'is-invalid' : 'is-valid'"   id="us" placeholder="Entrer ..." required="required" name="password" formControlName='password' >
+        <div *ngIf="this.addassuree.controls.password?.invalid && (this.addassuree.controls.password?.dirty || this.addassuree.controls.password?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.password?.errors?.['required']" >
+            Mot De Passe est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.password?.errors?.['minlength']">
+            Mot De Passe au moins 8 characters .
+          </div>
+          <div *ngIf="this.addassuree.controls.password?.errors?.['maxlength']">
+            Mot De Passe au plus 50 characters .
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="no"> Nom</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.nom.invalid) ? 'is-invalid' : 'is-valid'"   id="no" placeholder="Entrer ..." required="required" name="nom" formControlName='nom' >
+        <div *ngIf="this.addassuree.controls.nom?.invalid && (this.addassuree.controls.nom?.dirty || this.addassuree.controls.nom?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.nom?.errors?.['required']" >
+            Nom  est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.nom?.errors?.['minlength']">
+            Nom  au moins 3 characters .
+          </div>
+          <div *ngIf="this.addassuree.controls.nom?.errors?.['maxlength']">
+            Nom  au plus 30 characters .
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> Prenom</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.prenom.invalid) ? 'is-invalid' : 'is-valid'"   id="pr" placeholder="Entrer ..." required="required" name="prenom" formControlName='prenom' >
+        <div *ngIf="this.addassuree.controls.prenom?.invalid && (this.addassuree.controls.prenom?.dirty || this.addassuree.controls.prenom?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.prenom?.errors?.['required']" >
+            Prenom  est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.prenom?.errors?.['minlength']">
+            Prenom  au moins 3 characters .
+          </div>
+          <div *ngIf="this.addassuree.controls.prenom?.errors?.['maxlength']">
+            Prenom  au plus 30 characters .
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> CIN</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.cin.invalid) ? 'is-invalid' : 'is-valid'"   id="pr" placeholder="Entrer ..." required="required" name="cin" formControlName='cin' >
+        <div *ngIf="this.addassuree.controls.cin?.invalid && (this.addassuree.controls.cin?.dirty || this.addassuree.controls.cin?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.cin?.errors?.['required']" >
+            CIN  est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.cin?.errors?.['minlength']">
+            CIN  au moins 8 characters .
+          </div>
+          <div *ngIf="this.addassuree.controls.cin?.errors?.['maxlength']">
+            CIN  au plus 8 characters .
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> Adresse</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.adresse.invalid) ? 'is-invalid' : 'is-valid'"   id="pr" placeholder="Entrer ..." required="required" name="adresse" formControlName='adresse' >
+        <div *ngIf="this.addassuree.controls.cin?.invalid && (this.addassuree.controls.adresse?.dirty || this.addassuree.controls.adresse?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.adresse?.errors?.['required']" >
+            Adresse  est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.adresse?.errors?.['minlength']">
+            Adresse  au moins 5 characters .
+          </div>
+          <div *ngIf="this.addassuree.controls.adresse?.errors?.['maxlength']">
+            Adresse  au plus 30 characters .
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="col-form-label" for="em"> Email</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.email.invalid) ? 'is-invalid' : 'is-valid'"   id="em" placeholder="Entrer ..." required="required" name="email" formControlName='email' >
+        <div *ngIf="this.addassuree.controls.email?.invalid && (this.addassuree.controls.email?.dirty || this.addassuree.controls.email?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.email?.errors?.['required']" >
+            Email  est obligatoir
+          </div>
+          <div *ngIf="this.addassuree.controls.email?.errors?.['email']">
+            Ce Mail N'est Pas Valide
+          </div>
+
+        </div>
+
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="em"> Telephone</label>
+        <input type="text" class="form-control " [ngClass]="(this.addassuree.controls.telephone.invalid) ? 'is-invalid' : 'is-valid'"   id="em" placeholder="Entrer ..." required="required" name="telephone" formControlName='telephone' >
+        <div *ngIf="this.addassuree.controls.telephone?.invalid && (this.addassuree.controls.telephone?.dirty || this.addassuree.controls.telephone?.touched)" style="color:red">
+
+          <div *ngIf="this.addassuree.controls.telephone?.errors?.['required']" >
+            Obligatoire *
+          </div>
+          <div *ngIf="this.addassuree.controls.telephone?.errors?.['minlength']">
+            Entrez 8 Numéros au moins.
+          </div>
+          <div *ngIf="this.addassuree.controls.telephone?.errors?.['maxlength']">
+            Entrez 12 Numéros Au Plus.
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-6">
+
+          <div class="form-group">
+            <label>Role</label>
+            <select class="form-control" formControlName='rol'>
+              <option *ngFor="let role of roles" [ngValue]="role"  >{{role}}</option>
+
+            </select>
+
+            <div *ngIf="this.addassuree.controls.rol?.invalid && (this.addassuree.controls.rol?.dirty || this.addassuree.controls.rol?.touched)" style="color:red">
+
+              <div *ngIf="this.addassuree.controls.rol?.errors?.['required']" >
+                Role du Consultant Obligatoire !
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div *ngIf="this.show" >
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> immatriculation</label>
+        <input type="text" class="form-control "  id="pr" placeholder="Entrer ..." required="required" name="voiture.immatriculation" [(ngModel)]="voiture.immatriculation"  >
+
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> nbreChauveaux</label>
+        <input type="text" class="form-control "   id="pr" placeholder="Entrer ..." required="required" name="voiture.nbreChauveaux" [(ngModel)]="voiture.nbreChauveaux"  >
+
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> miseEnCirculation</label>
+        <input type="date" class="form-control "   id="pr" placeholder="Entrer ..." required="required" name="voiture.miseEnCirculation" [(ngModel)]="voiture.miseEnCirculation"  >
+
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="pr"> valeur</label>
+        <input type="text" class="form-control " id="pr" placeholder="Entrer ..." required="required" name="voiture.valeur" [(ngModel)]="voiture.valeur"  >
+
+      </div>
+      </div>
+      <button (click)="ajouterVoiture(voiture)" >Ajouter Voiture</button>
+
+
+
+
+
+
+
+
+
+
+
+      <input type="button" class="button-29" value=" Ajouter " style="margin-left: 300px"  (click)="addExpert(assuree)"/>
+      <button class="button-29" style="margin-left: 20px" [routerLink]="['../']" >Retour</button>
+    </form>
+  </div>
+
+</div>
+
+
+
+
+

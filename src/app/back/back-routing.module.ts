@@ -12,6 +12,7 @@ import {ListConstatComponent} from "./list-constat/list-constat.component";
 import {ListConstatsExpertComponent} from "./listconstat/list-constats-expert/list-constats-expert.component";
 import {RapportAddComponent} from "./rapport/rapport-add/rapport-add.component";
 import {DevisListComponent} from "./devis/devis-list/devis-list.component";
+import {AddClientComponent} from "./add-client/add-client/add-client.component";
 
 const routes: Routes = [{
   path: '', component: BackComponent,
@@ -26,6 +27,8 @@ const routes: Routes = [{
     {path: 'listconstats', component: ListConstatsExpertComponent},
     {path: 'listconstats/ajouterRapport/:id', component: RapportAddComponent},
     {path: 'listconstats/devis/:id', component: DevisListComponent},
+    {path: 'ajoutclient', component: AddClientComponent},
+
 
   ]
 },

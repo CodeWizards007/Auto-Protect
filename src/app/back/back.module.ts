@@ -17,6 +17,7 @@ import { ListConstatsExpertComponent } from './listconstat/list-constats-expert/
 import { RapportAddComponent } from './rapport/rapport-add/rapport-add.component';
 import { DevisListComponent } from './devis/devis-list/devis-list.component';
 import {AdminStatsComponent} from "./admin-stats/admin-stats.component";
+import {CreateResponsableComponent} from "./create-responsable/create-responsable.component";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {AdminStatsComponent} from "./admin-stats/admin-stats.component";
     ListConstatsExpertComponent,
     RapportAddComponent,
     DevisListComponent,
-    AdminStatsComponent
+    AdminStatsComponent,
+    CreateResponsableComponent
   ],
   imports: [
     CommonModule,

@@ -16,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ListConstatsExpertComponent } from './listconstat/list-constats-expert/list-constats-expert.component';
 import { RapportAddComponent } from './rapport/rapport-add/rapport-add.component';
 import { DevisListComponent } from './devis/devis-list/devis-list.component';
+import {AdminStatsComponent} from "./admin-stats/admin-stats.component";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DevisListComponent } from './devis/devis-list/devis-list.component';
     ListConstatsExpertComponent,
     RapportAddComponent,
     DevisListComponent,
+    AdminStatsComponent
   ],
   imports: [
     CommonModule,

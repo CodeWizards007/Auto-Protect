@@ -3,9 +3,8 @@ import {AuthexpertServiceService} from "../services/authexpert.service";
 import {Router} from "@angular/router";
 import {Expert} from "../common/Expert";
 import {LoginRequest} from "../common/LoginRequest";
-import {Responsable} from "../common/Responsable";
 import {AuthadminServiceService} from "../services/authadmin.service";
-import {AuthresponsableServiceService} from "../services/authresponsable.service";
+import {Admin} from "../common/Admin";
 
 @Component({
   selector: 'app-login',
@@ -17,7 +16,7 @@ export class LoginComponent implements OnInit {
   loginRequest:LoginRequest=new LoginRequest();
   typeutilisateur:string="1";
 
-  constructor(private authexpert: AuthexpertServiceService,private route : Router,private authAdmin:AuthadminServiceService,private authresponsable:AuthresponsableServiceService) { }
+  constructor(private authexpert: AuthexpertServiceService,private route : Router,private authAdmin:AuthadminServiceService) { }
 
   ngOnInit(): void {
   }
@@ -57,7 +56,7 @@ console.log("errrrrr")
     // .pipe(switchMap((e) => this.auth.profile(e.id)));
 
     authFlow.subscribe({
-      next: (user: Expert) => {
+      next: (user: Admin) => {
 
         this.authAdmin.saveUserToLocalStorage(user);
         console.log("bon");
@@ -79,33 +78,5 @@ console.log("errrrrr")
 
   }
 
-  loginResponsable(){
-
-    let authFlow = this.authresponsable
-      .login(this.loginRequest);
-    // .pipe(switchMap((e) => this.auth.profile(e.id)));
-
-    authFlow.subscribe({
-      next: (user: Responsable) => {
-
-        this.authresponsable.saveUserToLocalStorage(user);
-        console.log("bon");
-        console.log(user);
-        if(this.authresponsable.isResponsableIn) {
-          this.route.navigate(['back']);
-        }
-
-
-      },
-      error: (error) => {
-        /*this.messageService.add({severity:'error', summary: 'Error!', detail: 'Username ou Password Erroné '});*/
-        console.log("errrrrr")
-        setTimeout(()=>{
-          /*window.location.reload();*/
-        },2000);
-      },
-    });
-
-  }
 
 }
